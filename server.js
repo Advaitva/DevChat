@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const users = require("./routes/api/users");
 const profiles = require("./routes/api/profiles");
 const posts = require("./routes/api/posts");
+const body = require("body-parser");
 
 const app = express();
 const db = require("./config/keys").mongoURI;
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
   res.send("Hola Route Working Successfully!!");
 });
 
+app.use(body.urlencoded({ extended: false })); // extended:false --- no nested object ex. {obj1:{obj2:data}}
 app.use("/api/users", users);
 app.use("/api/profiles", profiles);
 app.use("/api/posts", posts);
