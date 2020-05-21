@@ -2,9 +2,11 @@ const express = require("express");
 const gravatar = require("gravatar");
 const bcrypt = require("bcryptjs");
 const router = express.Router();
+const jwt = require("jsonwebtoken");
 
 // Import user model
 const User = require("../../models/User");
+const key = require("../../config/keys");
 
 // @route          GET /api/users/demo
 // @description     Testing Users route
@@ -62,8 +64,25 @@ router.post("/login", (req, res) => {
     if (!user) return res.status(404).json({ email: "User not found" });
     // useing bcrypt to compare the plain password and the hased password..
     bcrypt.compare(password, user.password).then((matches) => {
-      if (matches) res.json({ msg: "Success" });
-      else return res.status(400).json({ password: "Password Incorrect!" });
+      if (matches) {
+        // user matched
+        //create payload
+        const payload = {
+          email: user.email,
+          name: user.name,
+          avatar: user.avatar,
+        };
+        jwt.sign(payload, key.key, { expiresIn: 7200 }, (err, token) => {
+          if (err) throw err;
+          else {
+            res.json({
+              success: true,
+              token: "Bearer" + token,
+            });
+          }
+        });
+        // sign the token
+      } else return res.status(400).json({ password: "Password Incorrect!" });
     });
   });
 });

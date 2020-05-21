@@ -5,6 +5,7 @@ const users = require("./routes/api/users");
 const profiles = require("./routes/api/profiles");
 const posts = require("./routes/api/posts");
 const body = require("body-parser");
+const passport = require("passport");
 
 const app = express();
 const db = require("./config/keys").mongoURI;
