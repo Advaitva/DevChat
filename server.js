@@ -23,5 +23,11 @@ app.use("/api/users", users);
 app.use("/api/profiles", profiles);
 app.use("/api/posts", posts);
 
+//passport middleware
+app.use(passport.initialize());
+
+//Passport config
+require("./config/passport")(passport);
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`App running successfully on port ${port}`));
