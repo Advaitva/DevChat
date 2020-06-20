@@ -1,7 +1,95 @@
-* {
+*,
+*:before,
+*:after {
   padding: 0;
   margin-top: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+.container {
+  width: 100%;
+  background-color: white;
+}
+
+.credit {
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  outline: none;
+  justify-content: center;
+  background: white;
+  width: 500px;
+}
+
+.credit span {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.credit:before,
+.credit:after {
+  content: "";
+  position: absolute;
+  top: 0.67em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: 0.4s, opacity 0.6s;
+  -moz-transition: 0.4s, opacity 0.6s;
+  -o-transition: 0.4s, opacity 0.6s;
+  transition: 0.4s, opacity 0.6s;
+}
+
+.credit:before {
+  content: attr(data-hover);
+  display: flex;
+  justify-content: center;
+  -webkit-transform: translate(-150%, 0);
+  -moz-transform: translate(-150%, 0);
+  -ms-transform: translate(-150%, 0);
+  -o-transform: translate(-150%, 0);
+  transform: translate(-150%, 0);
+}
+
+.credit:after {
+  content: attr(data-active);
+  -webkit-transform: translate(150%, 0);
+  -moz-transform: translate(150%, 0);
+  -ms-transform: translate(150%, 0);
+  -o-transform: translate(150%, 0);
+  transform: translate(150%, 0);
+}
+
+.credit:hover span {
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  -o-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+.credit:hover:before {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
 footer {
   position: absolute;
   width: 100%;
@@ -15,4 +103,7 @@ footer {
   justify-content: center;
   bottom: 0;
   background-color: white;
+}
+footer #footer {
+  margin: auto;
 }

@@ -21,6 +21,7 @@ nav #logo {
 nav #logo:hover {
   cursor: pointer;
 }
+
 nav #logo #logopng {
   height: 60px;
 }

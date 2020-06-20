@@ -5,6 +5,7 @@ const users = require("./routes/api/users");
 const profiles = require("./routes/api/profiles");
 const posts = require("./routes/api/posts");
 const body = require("body-parser");
+// const test = require("./routes/api/test");
 const passport = require("passport");
 
 const app = express();
@@ -22,7 +23,7 @@ app.use(body.urlencoded({ extended: false })); // extended:false --- no nested o
 app.use("/api/users", users);
 app.use("/api/profiles", profiles);
 app.use("/api/posts", posts);
-
+// app.use("/api/test", test);
 //passport middleware
 app.use(passport.initialize());
 
