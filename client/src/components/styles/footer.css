@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin-top: 0;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  border: 1px solid gray;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  background-color: white;
+}

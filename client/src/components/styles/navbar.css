@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid gray; */
+  /* padding: 20px 10px; */
+  font-family: "Raleway", sans-serif;
+  height: 60px;
+}
+nav #logo {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  left: 10%;
+}
+nav #logo:hover {
+  cursor: pointer;
+}
+nav #logo #logopng {
+  height: 60px;
+}
+nav #logo h4 {
+  margin: auto 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+nav .optionsContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 25%;
+  width: 40%;
+  height: max-content;
+  justify-content: center;
+  margin: auto;
+}
+
+nav .optionsContainer li {
+  margin: auto 30px;
+  font-size: 20px;
+  list-style: none;
+  padding: 10px 20px;
+}
+nav .optionsContainer li:hover {
+  cursor: pointer;
+  font-weight: bolder;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(44, 58, 255, 0.3);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.5);
+}
