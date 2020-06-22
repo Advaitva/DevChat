@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 nav {
   display: flex;
   flex-direction: row;
@@ -16,6 +17,7 @@ nav #logo {
   top: 0;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   left: 10%;
 }
 nav #logo:hover {
@@ -26,7 +28,7 @@ nav #logo #logopng {
   height: 60px;
 }
 nav #logo h4 {
-  margin: auto 20px;
+  margin: 12px 20px;
   font-size: 30px;
   font-weight: bold;
 }
@@ -42,12 +44,13 @@ nav .optionsContainer {
   margin: auto;
 }
 
-nav .optionsContainer li {
+li {
   margin: auto 30px;
   font-size: 20px;
   list-style: none;
   padding: 10px 20px;
   text-align: center;
+  text-decoration: none;
 }
 nav .optionsContainer li:hover {
   cursor: pointer;

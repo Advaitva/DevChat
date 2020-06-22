@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles/landing.css";
 export default function Landing() {
   var TxtType = function (el, toRotate, period) {
@@ -44,7 +45,7 @@ export default function Landing() {
     }, delta);
   };
 
-  window.onload = function () {
+  const loadFunction = function () {
     var elements = document.getElementsByClassName("typewrite");
     for (var i = 0; i < elements.length; i++) {
       var toRotate = elements[i].getAttribute("data-type");
@@ -59,6 +60,7 @@ export default function Landing() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
   };
+  setTimeout(loadFunction);
   return (
     <>
       <div id="glass"></div>
@@ -71,8 +73,16 @@ export default function Landing() {
           data-type='[ "Developers", "Geeks", "Designers", "Creators" ,"You ! !"]'
         ></h2>
         <div id="btnContainer">
-          <button className="btn btn-warning">Sign Up</button>
-          <button className="btn">Login</button>
+          <Link to="/register">
+            <button className="btn btn-warning" onClick="/register">
+              Sign Up
+            </button>
+          </Link>
+          <Link to="/login">
+            <button className="btn" onClick="/login">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
       <div id="stars"></div>

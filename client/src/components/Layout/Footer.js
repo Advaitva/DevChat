@@ -7,7 +7,7 @@ export default function Footer() {
       <footer
         align="center"
         className="credit"
-        data-hover={"Made with \u2764 by Advaitva"}
+        data-hover={"Made with \u2764\uFE0F by Advaitva"}
       >
         <span>&copy; {new Date().getFullYear()} Copyright : DevChat</span>
       </footer>
