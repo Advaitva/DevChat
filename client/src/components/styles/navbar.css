@@ -47,6 +47,7 @@ nav .optionsContainer li {
   font-size: 20px;
   list-style: none;
   padding: 10px 20px;
+  text-align: center;
 }
 nav .optionsContainer li:hover {
   cursor: pointer;
@@ -56,3 +57,60 @@ nav .optionsContainer li:hover {
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.5);
 }
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 30px;
+  top: 16px;
+}
+.burger {
+  display: none;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(66, 66, 66);
+  margin: 3px;
+  border-radius: 60px;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    overflow-x: hidden;
+  }
+  nav .optionsContainer {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    width: 120vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    transform: translateX(100%);
+  }
+  .optionsContainer li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transition: transform 0.5s ease-in;
+  transform: translateX(0%);
+}
+/* @keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(8px);
+  }
+} */

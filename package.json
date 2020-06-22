@@ -5,12 +5,14 @@
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
+    "server-client-install": "concurrently \"npm install \" \" npm run client-install\" ",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "author": "Advaitva Gupta",
+  "repository": "https://wwww.github.com/Advaitva/DevChat",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",

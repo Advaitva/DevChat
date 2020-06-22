@@ -7,10 +7,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.container {
-  width: 100%;
-  background-color: white;
-}
 
 .credit {
   overflow: hidden;
@@ -19,7 +15,7 @@
   outline: none;
   justify-content: center;
   background: white;
-  width: 500px;
+  width: 100%;
 }
 
 .credit span {
@@ -99,11 +95,6 @@ footer {
   word-spacing: 5px;
   border: 1px solid gray;
   height: 30px;
-  display: flex;
-  justify-content: center;
   bottom: 0;
   background-color: white;
-}
-footer #footer {
-  margin: auto;
 }

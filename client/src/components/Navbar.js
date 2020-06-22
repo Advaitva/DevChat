@@ -3,6 +3,10 @@ import "./styles/navbar.css";
 import logo from "./logo.png";
 class Navbar extends Component {
   render() {
+    const nav = document.querySelector(".optionsContainer");
+    const navSlide = () => {
+      nav.classList.toggle("nav-active");
+    };
     return (
       <div>
         <nav>
@@ -13,7 +17,12 @@ class Navbar extends Component {
           <div className="optionsContainer">
             <li>Members</li>
             <li>Login</li>
-            <li>Sign Up</li>
+            <li>SignUp</li>
+          </div>
+          <div className="burger">
+            <div className="line1" onClick={navSlide}></div>
+            <div className="line2" onClick={navSlide}></div>
+            <div className="line3" onClick={navSlide}></div>
           </div>
         </nav>
       </div>

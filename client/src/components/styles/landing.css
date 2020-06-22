@@ -1,11 +1,54 @@
+* {
+  text-decoration: none;
+}
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
-  /* z-index: 1; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#container {
+  background: transparent;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 250px;
+  left: 25%;
+  top: 35vh;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+}
+.head {
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+h2 {
+  font-weight: bolder;
+}
+#btnContainer {
+  margin: auto;
+}
+#btnContainer button {
+  font-size: 1.5vw;
+  font-weight: bolder;
+  margin: 10px;
+  color: rgb(65, 64, 64);
+}
+#glass {
+  width: 50%;
+  height: 45%;
+  position: absolute;
+  left: 25%;
+  top: 30vh;
+  box-shadow: inset 0 0 0 700px rgba(0, 0, 0, 0.55);
+  filter: blur(10px);
 }
 
 #stars {
