@@ -7,7 +7,7 @@
 nav {
   display: flex;
   flex-direction: row;
-  /* border: 1px solid gray; */
+  border: 1px solid gray;
   /* padding: 20px 10px; */
   font-family: "Raleway", sans-serif;
   height: 60px;
@@ -37,9 +37,9 @@ nav .optionsContainer {
   display: flex;
   flex-direction: row;
   position: relative;
-  left: 25%;
-  width: 40%;
-  height: max-content;
+  left: 30%;
+  width: 30%;
+  /* height: max-content; */
   justify-content: center;
   margin: auto;
 }

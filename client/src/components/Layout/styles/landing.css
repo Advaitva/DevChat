@@ -1,13 +1,13 @@
 * {
   text-decoration: none;
-}
-html {
-  height: 100%;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+#landing {
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
 }
 
 #container {
@@ -39,7 +39,7 @@ h2 {
   font-size: 1.5vw;
   font-weight: bolder;
   margin: 10px;
-  color: rgb(255, 255, 255)39);
+  color: rgb(255, 255, 255);
 }
 #glass {
   width: 50%;
@@ -52,7 +52,7 @@ h2 {
 }
 
 #stars {
-  content: "e";
+  content: "";
   background: transparent;
   box-shadow: 1744px 122px #fff, 134px 1321px #fff, 92px 859px #fff,
     235px 1045px #fff, 366px 912px #fff, 491px 942px #fff, 14px 1831px #fff,

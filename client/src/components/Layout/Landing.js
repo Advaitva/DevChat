@@ -62,7 +62,7 @@ export default function Landing() {
   };
   setTimeout(loadFunction);
   return (
-    <>
+    <div id="landing">
       <div id="glass"></div>
       <div id="container">
         <h3 className="head">a chat platform for </h3>{" "}
@@ -74,20 +74,16 @@ export default function Landing() {
         ></h2>
         <div id="btnContainer">
           <Link to="/register">
-            <button className="btn btn-warning" onClick="/register">
-              Sign Up
-            </button>
+            <button className="btn btn-warning">Sign Up</button>
           </Link>
           <Link to="/login">
-            <button className="btn" onClick="/login">
-              Login
-            </button>
+            <button className="btn btn-primary">Login</button>
           </Link>
         </div>
       </div>
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
-    </>
+    </div>
   );
 }
