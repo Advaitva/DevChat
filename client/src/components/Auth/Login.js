@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./styles/login-register.css";
-
+import axios from "axios";
 class Login extends Component {
   constructor() {
     super();
@@ -22,6 +22,10 @@ class Login extends Component {
       password: this.state.password,
     };
     console.log(user);
+    axios
+      .post("api/users/login", user)
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
   }
   render() {
     return (
@@ -61,7 +65,7 @@ class Login extends Component {
             </div>
 
             <div>
-              <button type="submit" id="submit">
+              <button type="submit" id="submit" onClick={this.onSubmit}>
                 Log In
               </button>
             </div>
